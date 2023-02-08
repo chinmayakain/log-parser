@@ -2,6 +2,7 @@ import express, { Application, Request, Response, NextFunction } from "express";
 import createHttpError from "http-errors";
 import { Server } from "http";
 import { config } from "dotenv";
+import cors from "cors";
 
 import router from "./router";
 import errorHandler from "./middlewares/errorHandler";
@@ -9,6 +10,13 @@ import errorHandler from "./middlewares/errorHandler";
 config();
 const app: Application = express();
 const PORT: Number = Number(process.env.PORT) || 3000;
+
+const corsOptions = {
+    origin: "http://127.0.0.1:5173",
+    optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 
 app.use("/api", router);
 
