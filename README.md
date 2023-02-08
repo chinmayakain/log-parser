@@ -70,13 +70,13 @@ Start the server
 
 ## Features or Limitations
 
-- Uploads file using API
-- Download JSON file received from API response
-- Shows loader while API is being called
-- Automatically downloads JSON file after successful API response
-- Parses log messages with log levels error and warn
-- Returns parsed output as JSON response
-- Flexible architecture, easy to extend and modify
+- Uploads file using API.
+- Download JSON file received from API response.
+- Shows loader while API is being called.
+- Automatically downloads JSON file after successful API response.
+- Parses log messages with log levels error and warn.
+- Returns parsed output as JSON response.
+- Flexible architecture, easy to extend and modify.
 
 
 ## API Reference
