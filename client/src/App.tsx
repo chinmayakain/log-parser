@@ -50,7 +50,9 @@ const App: FC = (props: Props) => {
         setLoading(true);
         try {
             const res = await fetch(
-                `http://localhost:3000/api/logs/logParser/${modifiedFileName}`,
+                `${
+                    import.meta.env.VITE_API_BASE_URL
+                }/api/logs/logParser/${modifiedFileName}`,
                 {
                     method: "POST",
                     headers: {},
